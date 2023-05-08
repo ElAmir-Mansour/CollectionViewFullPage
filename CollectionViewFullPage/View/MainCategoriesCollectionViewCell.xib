@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mainCatCell" id="gTV-IL-0wX" customClass="MainCategoriesCollectionViewCell" customModule="CollectionViewFullPage" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="139" height="124"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="139" height="124"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Esa-x2-hml">
+                        <rect key="frame" x="0.0" y="0.0" width="139" height="124"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CEi-VN-Rdn">
+                                <rect key="frame" x="0.0" y="0.0" width="139" height="88"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKa-He-NBL">
+                                <rect key="frame" x="20" y="98" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tKa-He-NBL" secondAttribute="bottom" constant="5" id="5CQ-VH-6hH"/>
+                            <constraint firstItem="CEi-VN-Rdn" firstAttribute="top" secondItem="Esa-x2-hml" secondAttribute="top" id="LZq-Sk-JKO"/>
+                            <constraint firstItem="tKa-He-NBL" firstAttribute="top" secondItem="CEi-VN-Rdn" secondAttribute="bottom" constant="10" id="Pzw-kQ-WDg"/>
+                            <constraint firstItem="CEi-VN-Rdn" firstAttribute="leading" secondItem="Esa-x2-hml" secondAttribute="leading" id="ayv-mM-xYz"/>
+                            <constraint firstAttribute="trailing" secondItem="CEi-VN-Rdn" secondAttribute="trailing" id="eCQ-2e-dJ0"/>
+                            <constraint firstAttribute="trailing" secondItem="tKa-He-NBL" secondAttribute="trailing" constant="20" id="pri-Vy-upe"/>
+                            <constraint firstItem="tKa-He-NBL" firstAttribute="leading" secondItem="Esa-x2-hml" secondAttribute="leading" constant="20" id="tzU-Gr-npy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Esa-x2-hml" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3W0-SI-U1P"/>
+                <constraint firstAttribute="bottom" secondItem="Esa-x2-hml" secondAttribute="bottom" id="8aZ-9K-dxl"/>
+                <constraint firstAttribute="trailing" secondItem="Esa-x2-hml" secondAttribute="trailing" id="T3D-qF-Lz9"/>
+                <constraint firstItem="Esa-x2-hml" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="arQ-LK-cE3"/>
+            </constraints>
+            <size key="customSize" width="139" height="124"/>
+            <connections>
+                <outlet property="catImg" destination="CEi-VN-Rdn" id="rri-sw-IoT"/>
+                <outlet property="catTitle" destination="tKa-He-NBL" id="eKl-9e-z1Z"/>
+            </connections>
+            <point key="canvasLocation" x="78.625954198473281" y="45.774647887323944"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
