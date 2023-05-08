@@ -41,6 +41,8 @@ struct Constants {
         let name: String
         let des: String
     }
+    
+    // MARK: Variables
 
     static let cellTypes: [CellType] = [.home, .mainCategories, .mostOrdered, .mostRated]
 
