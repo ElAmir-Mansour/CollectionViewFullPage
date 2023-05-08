@@ -32,14 +32,44 @@ class ViewController: UIViewController , UICollectionViewDelegate ,UICollectionV
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return Constants.cells.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        switch Constants.cellTypes[section] {
+          case .home:
+            return Constants.home.data.count
+          case .mainCategories:
+            return Constants.mainCategories.data.count
+          case .mostOrdered:
+            return Constants.mostOrdered.data.count
+          case .mostRated:
+            return Constants.mostRated.data.count
+          }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cellType = Constants.cellTypes[indexPath.section]
+          let identifier = cellType.rawValue
+          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+
+          switch cellType {
+          case .home:
+              guard let homeCell = cell as? HomeCollectionViewCell else { return cell }
+              homeCell.configure(with: Constants.home.data[indexPath.row])
+              return homeCell
+          case .mainCategories:
+              guard let mainCatCell = cell as? MainCategoriesCollectionViewCell else { return cell }
+              mainCatCell.configure(with: Constants.mainCategories.data[indexPath.row])
+              return mainCatCell
+          case .mostOrdered:
+              guard let mostOrderedCell = cell as? MostOrderedCollectionViewCell else { return cell }
+              mostOrderedCell.configure(with: Constants.mostOrdered.data[indexPath.row])
+              return mostOrderedCell
+          case .mostRated:
+              guard let mostRatedCell = cell as? MostRatedCollectionViewCell else { return cell }
+              mostRatedCell.configure(with: Constants.mostRated.data[indexPath.row])
+              return mostRatedCell
+          }
     }
     
 

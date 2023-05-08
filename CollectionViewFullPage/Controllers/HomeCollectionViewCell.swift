@@ -10,4 +10,9 @@ import UIKit
 class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var img: UIImageView!
     
+    func configure(with data: Constants.CellData) {
+        img.image = data.image
+   
+    }
+    
 }

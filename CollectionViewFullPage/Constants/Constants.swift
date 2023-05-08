@@ -46,8 +46,37 @@ struct Constants {
 
     static let cellTypes: [CellType] = [.home, .mainCategories, .mostOrdered, .mostRated]
 
+    static let home = Cell(title: "Home", data: [
+        CellData(image: treeImage, name: "Tree", des: "A beautiful tree"),
+        CellData(image: sunset, name: "Sunset", des: "A stunning sunset"),
+        CellData(image: butterflys, name: "Butterflys", des: "A group of butterflys")
+    ])
+    
+    static let mainCategories = Cell(title: "Main Categories", data: [
+        CellData(image: treeImage, name: "Tree", des: "A beautiful tree"),
+        CellData(image: sunset, name: "Sunset", des: "A stunning sunset"),
+        CellData(image: butterflys, name: "Butterflys", des: "A group of butterflys")
+    ])
+    
+    static let mostOrdered = Cell(title: "Most Ordered", data: [
+        CellData(image: treeImage, name: "Tree", des: "A beautiful tree"),
+        CellData(image: sunset, name: "Sunset", des: "A stunning sunset"),
+        CellData(image: butterflys, name: "Butterflys", des: "A group of butterflys")
+    ])
+    
+    static let mostRated = Cell(title: "Most Rated", data: [
+        CellData(image: treeImage, name: "Tree", des: "A beautiful tree"),
+        CellData(image: sunset, name: "Sunset", des: "A stunning sunset"),
+        CellData(image: butterflys, name: "Butterflys", des: "A group of butterflys")
+    ])
+
+    static let cells: [Cell] = [home, mainCategories, mostOrdered, mostRated]
+    
+
     static let treeImage = UIImage(named: "Tree")!
     static let sunset = UIImage(named: "Sunset")!
     static let butterflys = UIImage(named: "Butterflys")!
+    
+    
 }
 
