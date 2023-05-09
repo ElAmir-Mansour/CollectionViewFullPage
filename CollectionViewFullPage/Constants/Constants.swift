@@ -32,14 +32,14 @@ enum CellType: String {
 
 struct Constants {
     struct Cell {
-        let title: String
-        let data: [CellData]
+        var title: String
+        var data: [CellData]
     }
 
     struct CellData {
         let image: UIImage
-        let name: String
-        let des: String
+        var name: String
+        var des: String
     }
     
     // MARK: Variables
@@ -47,9 +47,12 @@ struct Constants {
     static let cellTypes: [CellType] = [.home, .mainCategories, .mostOrdered, .mostRated]
 
     static let home = Cell(title: "Home", data: [
-        CellData(image: treeImage, name: "Tree", des: "A beautiful tree"),
-        CellData(image: sunset, name: "Sunset", des: "A stunning sunset"),
-        CellData(image: butterflys, name: "Butterflys", des: "A group of butterflys")
+        CellData(image: treeImage, name: "", des: ""),
+        CellData(image: treeImage, name: "", des: ""),
+        CellData(image: treeImage, name: "", des: ""),
+        CellData(image: treeImage, name: "", des: "")
+
+        
     ])
     
     static let mainCategories = Cell(title: "Main Categories", data: [

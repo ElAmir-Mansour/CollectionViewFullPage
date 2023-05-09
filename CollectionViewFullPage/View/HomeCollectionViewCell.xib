@@ -42,7 +42,7 @@
                 <constraint firstAttribute="trailing" secondItem="qpr-at-r8N" secondAttribute="trailing" id="iCh-GR-XhF"/>
             </constraints>
             <connections>
-                <outlet property="img" destination="22q-Pl-FXo" id="Ck9-eW-MSU"/>
+                <outlet property="img" destination="22q-Pl-FXo" id="aRu-9Z-TTi"/>
             </connections>
             <point key="canvasLocation" x="11" y="20"/>
         </collectionViewCell>

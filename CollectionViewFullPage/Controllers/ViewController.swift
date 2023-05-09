@@ -13,7 +13,6 @@ import UIKit
 class ViewController: UIViewController , UICollectionViewDelegate ,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
     
 
-    var constant = Constants()
     @IBOutlet weak var collectionView: UICollectionView!
     
 
@@ -23,6 +22,9 @@ class ViewController: UIViewController , UICollectionViewDelegate ,UICollectionV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
         
         for cellType in Constants.cellTypes {
             collectionView.register(cellType.cellClass, forCellWithReuseIdentifier: cellType.rawValue)
@@ -32,7 +34,7 @@ class ViewController: UIViewController , UICollectionViewDelegate ,UICollectionV
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return Constants.cells.count
+        return Constants.cellTypes.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch Constants.cellTypes[section] {
@@ -55,8 +57,11 @@ class ViewController: UIViewController , UICollectionViewDelegate ,UICollectionV
           switch cellType {
           case .home:
               guard let homeCell = cell as? HomeCollectionViewCell else { return cell }
+              
               homeCell.configure(with: Constants.home.data[indexPath.row])
+              
               return homeCell
+
           case .mainCategories:
               guard let mainCatCell = cell as? MainCategoriesCollectionViewCell else { return cell }
               mainCatCell.configure(with: Constants.mainCategories.data[indexPath.row])
@@ -76,8 +81,3 @@ class ViewController: UIViewController , UICollectionViewDelegate ,UICollectionV
 
 }
 
-
-extension ViewController {
-    
-    
-}
