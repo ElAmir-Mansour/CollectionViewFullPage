@@ -27,7 +27,7 @@ class ViewController: UIViewController , UICollectionViewDelegate ,UICollectionV
 
         
         for cellType in Constants.cellTypes {
-            collectionView.register(cellType.cellClass, forCellWithReuseIdentifier: cellType.rawValue)
+            collectionView.register(UINib(nibName: cellType.cellClass, bundle: nil), forCellWithReuseIdentifier: cellType.rawValue)
         }
 
         // Do any additional setup after loading the view.
@@ -76,8 +76,6 @@ class ViewController: UIViewController , UICollectionViewDelegate ,UICollectionV
               return mostRatedCell
           }
     }
-    
-
 
 }
 

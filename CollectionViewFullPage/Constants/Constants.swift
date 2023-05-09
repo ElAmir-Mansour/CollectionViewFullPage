@@ -16,21 +16,23 @@ enum CellType: String {
     case mostOrdered = "mostOrderedCell"
     case mostRated = "mostRatedCell"
 
-    var cellClass: UICollectionViewCell.Type {
+    var cellClass: String {
         switch self {
         case .home:
-            return HomeCollectionViewCell.self
+            return "HomeCollectionViewCell"
         case .mainCategories:
-            return MainCategoriesCollectionViewCell.self
+            return "MainCategoriesCollectionViewCell"
         case .mostOrdered:
-            return MostOrderedCollectionViewCell.self
+            return "MostOrderedCollectionViewCell"
         case .mostRated:
-            return MostRatedCollectionViewCell.self
+            return "MostRatedCollectionViewCell"
         }
     }
 }
 
 struct Constants {
+    
+    // Dont put these here because they're not constants
     struct Cell {
         var title: String
         var data: [CellData]
@@ -41,6 +43,7 @@ struct Constants {
         var name: String
         var des: String
     }
+    
     
     // MARK: Variables
 
