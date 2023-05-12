@@ -8,7 +8,7 @@
 import UIKit
 
 
-
+// MARK: The Flow layout must be studied and applied ASAP 
 
 class ViewController: UIViewController , UICollectionViewDelegate ,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout{
     
